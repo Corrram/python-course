@@ -52,7 +52,7 @@ Indices and tables
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../../copul/'))
+sys.path.insert(0, os.path.abspath('../../<package_name>/'))
 ```
 7. adjust source/conf.py: in general configuration & options for HTML output:
 ```python

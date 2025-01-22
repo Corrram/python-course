@@ -6,7 +6,7 @@ from portfolio_analytics.datafetch import DataFetcher
 tickers = ["AAPL", "MSFT", "BTC-USD"]
 
 # 1) Fetch daily stock prices
-fetcher = DataFetcher(tickers=tickers, start="2023-01-01", end="2023-05-01")
+fetcher = DataFetcher(tickers=tickers, start="2023-01-01")
 prices = fetcher.fetch_data()
 print(prices.head())
 df_again = fetcher.get_data()  # same DataFrame as df_prices
@@ -16,7 +16,7 @@ df_again = fetcher.get_data()  # same DataFrame as df_prices
 rets = daily_returns(prices)
 
 # 3) Compute annualized mean returns and covariance matrix
-m = mean_returns(rets)       # e.g. ~10% Apple, ~8% MSFT (example)
+m = mean_returns(rets)  # e.g. ~10% Apple, ~8% MSFT (example)
 cv = cov_matrix(rets)
 
 # 4) Find min-variance portfolio
