@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "portfolio-analytics"
-version = "0.1.0"
+version = "0.1.1"
 description = "A small Python package providing simple portfolio analytics & optimization."
 authors = ["Marcus Rockel <marcus.rockel@finance.uni-freiburg.de>"]
 readme = "README.md"
