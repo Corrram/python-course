@@ -16,6 +16,8 @@ tensorflow = "^2.18.0"
 torch = "^2.6.0"
 flask = "^3.1.0"
 scikit-learn = "^1.6.1"
+sympy = "1.13.1"
+antlr4-python3-runtime = "4.11"
 
 [tool.poetry.group.dev.dependencies]
 sphinx = "^8.1.3"

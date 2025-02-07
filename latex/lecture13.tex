@@ -1,0 +1,82 @@
+\makeatletter\def\input@path{{./}{./ufcd/}}\makeatother
+
+\documentclass[
+    handout, 
+    final,
+    utf8,
+    mainlanguage=english,
+    10pt,
+    hyperref={colorlinks,urlcolor=red,citecolor=blue,linkcolor=blue}
+]{beamer}
+
+\usepackage[e1,width=2cm,showtoc,left,height=1.2cm,hideothersubsections]{ufcd}
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+\setminted{fontsize=\footnotesize, autogobble=true, breaklines=true}
+\usepackage{silence}
+\usepackage{booktabs}
+\usepackage{comment}
+\WarningFilter{latex}{You have requested package} 
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{frametitle continuation}[from second]{\romannumeral\insertcontinuationcount\relax}
+
+\title[Python Course]{\Large Python Course}
+\subtitle{A programming introduction to Python for economists}
+\author{Me}
+\institute[A]{Department of Quantitative Finance, Albert-Ludwigs-University Freiburg
+\vspace*{.3cm}
+}
+
+\date[]{\footnotesize
+    Winter Term 2024/25
+    \hfill
+}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \usebeamerfont{title}\textbf{\insertsectionhead}\par%
+  \vfill
+  \end{frame}
+}
+\definecolor{DarkGreen}{RGB}{1,80,1}
+\newcommand\highlight[1]{\textcolor{DarkGreen}{\textbf{#1}}}
+\newcommand\warn[1]{\textcolor{orange}{\textbf{#1}}}
+
+\title[Lecture 13 - More lecture slides]{\Large Python Course}
+\subtitle{Lecture 13 - More lecture slides} 
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+% frame on motivation
+\begin{frame}[fragile,allowframebreaks]{Motivation}
+    \begin{itemize}
+        \item We can easily highlight python code using the \texttt{minted} package.
+    \end{itemize}
+    \begin{minted}{python}
+        def fib(n):
+            a, b = 0, 1
+            while a < n:
+                print(a, end=' ')
+                a, b = b, a+b
+            print()
+    \end{minted}
+\end{frame}
+
+\end{document}
+
